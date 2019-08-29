@@ -19,16 +19,15 @@ In the `public` folder you find a `.js` file for every character. You can write 
 
 ```html
 const htmlTemplate = () => html`
-<style>
-  .letter {
-    font-family: monospace;
-  }
-  /* your styles */
-</style>
-<span class="letter">
-  B
-</span>
-<!-- your html -->
+  <style>
+    .letter {
+      /* your styles */
+    }
+  </style>
+  <!-- your html -->
+  <span class="letter">
+    A
+  </span>
 `;
 ```
 Please only work on one character per pull request and don't change any of the other files. You are allowed to add other files for example `.svg` files in the public folder, if you need them for your character design. Pull requests that don't adhere to the guidelines will not be merged.
