@@ -70,7 +70,7 @@ In short: be nice!
 
 ## Raffle Time!
 
-On Friday after 17:00
+On Friday after 17:45
 
 Prize: [Mi Electric Scooter](https://www.mi.com/global/mi-electric-scooter/)
 
