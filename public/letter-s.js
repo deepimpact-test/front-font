@@ -13,6 +13,8 @@ const htmlTemplate = () => html`
     .letter span {
         position: absolute;
         opacity: 0;
+        top: 0;
+        left: 0;
         animation-name: swiss;
         animation-duration: 4s;
         animation-iteration-count: infinite;
