@@ -3,9 +3,20 @@ import { html, render } from "https://unpkg.com/lit-html?module";
 const htmlTemplate = () => html`
   <style>
     .letter {
+      animation:rotateX 2s cubic-bezier(1, 0, 0.58, 1) infinite;
+      background-image: linear-gradient(90deg,red,yellow,red);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
+    @keyframes rotateX { 
+      0% { transform:rotate(0deg); }
+      50% { transform:rotate(65deg); }
+      100% { transform:rotate(0deg); }
+    } 
   </style>
+  <span class="letter">
   X
+  </span>
 `;
 
 class LetterX extends HTMLElement {
