@@ -1,3 +1,7 @@
+const multiLetters = {
+  M: 0,
+};
+
 const texts = [
   "The quick brown fox jumps over the lazy dog",
   "Pack my box with five dozen liquor jugs",
@@ -15,9 +19,16 @@ const actualLetter = (l) => {
 const drawLetter = ({ letter, className, rootElementId }) => {
   const rootEl = document.getElementById(rootElementId);
   if (rootEl) {
-    const letterElement = document.createElement(
-      `letter-${actualLetter(letter)}`,
-    );
+    let letterElementName = `letter-${actualLetter(letter)}`;
+    const multiLetter = multiLetters[letter];
+    if (typeof multiLetter === "number") {
+      debugger;
+      if (multiLetter > 0) {
+        letterElementName = `letter-${actualLetter(letter)}${multiLetter + 1}`;
+      }
+      multiLetters[letter] = (multiLetters[letter] + 1) % 2;
+    }
+    const letterElement = document.createElement(letterElementName);
     letterElement.classList.add("letter-element");
     const containerDiv = document.createElement("div");
     containerDiv.classList.add(className);
